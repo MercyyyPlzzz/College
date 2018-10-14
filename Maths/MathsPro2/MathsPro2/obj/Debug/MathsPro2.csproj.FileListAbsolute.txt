@@ -1,0 +1,7 @@
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\obj\Debug\MathsPro2.csproj.CoreCompileInputs.cache
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\bin\Debug\MathsPro2.exe.config
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\bin\Debug\MathsPro2.exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\bin\Debug\MathsPro2.pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\obj\Debug\MathsPro2.exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\obj\Debug\MathsPro2.pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\MathsPro2\MathsPro2\obj\Debug\MathsPro2.csprojResolveAssemblyReference.cache

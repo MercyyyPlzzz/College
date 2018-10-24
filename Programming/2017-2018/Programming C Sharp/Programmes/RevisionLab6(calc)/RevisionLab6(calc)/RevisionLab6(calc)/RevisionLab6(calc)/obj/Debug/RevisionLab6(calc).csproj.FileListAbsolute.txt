@@ -1,0 +1,9 @@
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\bin\Debug\RevisionLab6(calc).exe.config
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\bin\Debug\RevisionLab6(calc).exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\bin\Debug\RevisionLab6(calc).pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6_calc_.Form1.resources
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6_calc_.Properties.Resources.resources
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6(calc).csproj.GenerateResource.Cache
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6(calc).csproj.CoreCompileInputs.cache
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6(calc).exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab6(calc)\RevisionLab6(calc)\obj\Debug\RevisionLab6(calc).pdb

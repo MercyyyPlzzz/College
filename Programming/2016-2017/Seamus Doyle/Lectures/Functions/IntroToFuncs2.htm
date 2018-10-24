@@ -1,0 +1,430 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="IntroToFuncs2_files/filelist.xml">
+<title>// IntroToFuncs</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Tom Costello</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>tom.costello</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>18</o:TotalTime>
+  <o:Created>2007-11-20T14:02:00Z</o:Created>
+  <o:LastSaved>2007-11-20T14:03:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>147</o:Words>
+  <o:Characters>841</o:Characters>
+  <o:Company>LIT</o:Company>
+  <o:Lines>7</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>987</o:CharactersWithSpaces>
+  <o:Version>11.8036</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+color:green;mso-ansi-language:EN-US'>// IntroToFuncs2.cpp //<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+color:green;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+color:blue;mso-ansi-language:EN-US'>#include</span></b><b><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'> &quot;<span class=SpellE>stdafx.h</span>&quot;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+color:blue;mso-ansi-language:EN-US'>#include</span></b><b><span lang=EN-US
+style='mso-bidi-font-size:10.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'> &lt;<span class=SpellE>iomanip</span>&gt;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:
+"Courier New";color:blue;mso-ansi-language:EN-US'>using</span></b></span><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'> <span style='color:blue'>namespace</span> std;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+color:green;mso-ansi-language:EN-US'>// Function Prototypes<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>void <span class=SpellE>ShowStars</span>(void);<span
+style='mso-tab-count:1'>   </span><span style='color:green'>//function with no
+arguments to be passed</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=SpellE><span class=GramE><b><span lang=EN-US style='mso-bidi-font-size:
+10.0pt;font-family:"Courier New";color:blue;mso-ansi-language:EN-US'>int</span></b></span></span><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'> _<span class=SpellE>tmain</span>(<span class=SpellE><span
+style='color:blue'>int</span></span> <span class=SpellE>argc</span>, _TCHAR* <span
+class=SpellE>argv</span>[])<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE>ShowStars</span></span><span class=GramE>(</span>);<span
+style='mso-tab-count:1'>  </span><span style='color:green'>//call function</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; <span class=SpellE>setw</span>(32)
+&lt;&lt; &quot;Hello” &lt;&lt; “\n\n\n\n&quot;;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+style='color:green'>//rest of program to add two numbers<o:p></o:p></span></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE><span style='color:blue'>int</span></span></span>
+<span class=SpellE>x,y,z</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; &quot;Enter two
+numbers : &quot;;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE>cin</span></span> &gt;&gt; x &gt;&gt; y;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>z = x + y;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; &quot;Answer is
+&quot; &lt;&lt; z &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=GramE><span style='color:blue'>return</span></span> 0;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";color:green;mso-ansi-language:EN-US'>// Function
+Definition<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span class=GramE><b><span lang=EN-US style='mso-bidi-font-size:
+10.0pt;font-family:"Courier New";mso-ansi-language:EN-US'>void</span></b></span><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'> <span class=SpellE>ShowStars</span>(void)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+style='color:green'>// Display star </span><span style='color:#339966'>pattern</span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=GramE><span style='color:blue'>for</span>(</span><span class=SpellE><span
+style='color:blue'>int</span></span> <span class=SpellE>i</span> = 0; <span
+class=SpellE>i</span> &lt; 3; <span class=SpellE>i</span>++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>{<span
+style='mso-tab-count:1'>    </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=GramE><span style='color:blue'>for</span></span> (<span class=SpellE><span
+style='color:blue'>int</span></span> j = 0; j &lt; 31; j++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:3'>              </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; '*' &lt;&lt; ' <span
+class=SpellE>'</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=GramE><span style='color:blue'>for</span></span> (<span class=SpellE><span
+style='color:blue'>int</span></span> <span class=SpellE>i</span> = 0; <span
+class=SpellE>i</span> &lt; 8 ; <span class=SpellE>i</span>++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=GramE><span style='color:blue'>for</span>(</span><span class=SpellE><span
+style='color:blue'>int</span></span> j = 0; j &lt; 10; j++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:3'>              </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; &quot;<span
+style='mso-spacerun:yes'>  </span>&quot;;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=GramE><span style='color:blue'>for</span></span> (<span class=SpellE><span
+style='color:blue'>int</span></span> j = 0; j &lt; 11; j++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+style='mso-tab-count:1'>     </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:3'>              </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; '*' &lt;&lt; ' <span
+class=SpellE>'</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span><span
+class=GramE><span style='color:blue'>for</span></span> (<span class=SpellE><span
+style='color:blue'>int</span></span> <span class=SpellE>i</span> = 0; <span
+class=SpellE>i</span> &lt; 5 ; <span class=SpellE>i</span>++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>     </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=GramE><span style='color:blue'>for</span>(</span><span class=SpellE><span
+style='color:blue'>int</span></span> j = 0; j &lt; 11 +<span class=SpellE>i</span>;
+j++)<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:3'>              </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; &quot;<span
+style='mso-spacerun:yes'>  </span>&quot;;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=GramE><span style='color:blue'>for</span></span> (<span class=SpellE><span
+style='color:blue'>int</span></span> j = 0; j &lt; 9-2*<span class=SpellE>i</span>;
+j++)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>{<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:3'>              </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; '*' &lt;&lt; ' <span
+class=SpellE>'</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+lang=EN-US style='mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:2'>          </span><span
+class=SpellE><span class=GramE>cout</span></span> &lt;&lt; <span class=SpellE>endl</span>;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'><span style='mso-tab-count:
+1'>     </span>}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='mso-bidi-font-size:10.0pt;
+font-family:"Courier New";mso-ansi-language:EN-US'>}</span></b><b><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

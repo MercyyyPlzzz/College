@@ -1,0 +1,13 @@
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.exe.config
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.exe
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.pdb
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.csprojResolveAssemblyReference.cache
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.exe
+U:\Programming C#\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.pdb
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.exe.config
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.exe
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\bin\Debug\RevisionLab4.pdb
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.csprojAssemblyReference.cache
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.csproj.CoreCompileInputs.cache
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.exe
+D:\College\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab4\RevisionLab4\RevisionLab4\obj\Debug\RevisionLab4.pdb

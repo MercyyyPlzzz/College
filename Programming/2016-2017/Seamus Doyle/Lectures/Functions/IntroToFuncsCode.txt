@@ -1,0 +1,37 @@
+	for(int i = 0; i < 3; i++)
+	{	
+		for (int j = 0; j < 31; j++)
+			cout << '*' << ' ';
+		cout << endl;
+	}
+
+
+	for ( int i = 0; i < 8 ; i++)
+	{
+		for(int j = 0; j < 10; j++)
+			cout << "  ";
+		for (int j = 0; j < 11; j++)
+			cout << '*' << ' ';
+		cout << endl;
+	}
+
+
+	for ( int i = 0; i < 5 ; i++)
+	{
+		for(int j = 0; j < i+10; j++)
+			cout << "  ";
+		for (int j = 0; j < 10-2*i; j++)
+			cout << '*' << ' ';
+		cout << endl;
+	}
+
+
+	cout << setw(30) << '*' << endl;
+	cout << setw(32) << "Hello" << "\n\n\n\n";
+
+
+    	//rest of program to add two numbers
+    	 int x,y,z;
+    	 cout << "Enter two numbers : ";
+    	 cin >> x >> y;	     z = x + y;
+    	 cout << "Answer is " << z << endl;

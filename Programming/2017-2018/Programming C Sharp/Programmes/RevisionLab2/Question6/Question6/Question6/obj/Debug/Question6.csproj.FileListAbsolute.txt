@@ -1,0 +1,12 @@
+U:\Programming C#\RevisionLab-2\Question6\Question6\bin\Debug\Question6.exe.config
+U:\Programming C#\RevisionLab-2\Question6\Question6\bin\Debug\Question6.exe
+U:\Programming C#\RevisionLab-2\Question6\Question6\bin\Debug\Question6.pdb
+U:\Programming C#\RevisionLab-2\Question6\Question6\obj\Debug\Question6.exe
+U:\Programming C#\RevisionLab-2\Question6\Question6\obj\Debug\Question6.pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\bin\Debug\Question6.exe.config
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\bin\Debug\Question6.exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\bin\Debug\Question6.pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\obj\Debug\Question6.csproj.CoreCompileInputs.cache
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\obj\Debug\Question6.exe
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\obj\Debug\Question6.pdb
+C:\Users\Ken\OneDrive - Limerick Institute Of Technology\Programming\2017-2018\Programming C Sharp\Programmes\RevisionLab2\Question6\Question6\Question6\obj\Debug\Question6.csprojResolveAssemblyReference.cache

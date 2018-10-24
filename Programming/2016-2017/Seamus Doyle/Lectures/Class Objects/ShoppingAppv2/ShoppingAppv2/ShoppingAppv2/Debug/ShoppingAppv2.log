@@ -1,0 +1,20 @@
+﻿Build started 05/02/2015 15:38:25.
+     1>Project "C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\ShoppingAppv2\ShoppingAppv2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\ShoppingAppv2.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ShoppingAppv2.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Item.cpp ShoppingAppv2.cpp
+         ShoppingAppv2.cpp
+     1>c:\academic year 2014 - 2015\sd1prog\topic 12 - shopping app\shoppingappv2\shoppingappv2\shoppingappv2.cpp(304): warning C4101: 'discountRate' : unreferenced local variable
+         Item.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\Debug\ShoppingAppv2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\Debug\ShoppingAppv2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\Debug\ShoppingAppv2.lib" /MACHINE:X86 Debug\Item.obj
+         Debug\ShoppingAppv2.obj
+         Debug\stdafx.obj
+         ShoppingAppv2.vcxproj -> C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\Debug\ShoppingAppv2.exe
+     1>Done Building Project "C:\Academic Year 2014 - 2015\SD1Prog\Topic 12 - Shopping App\ShoppingAppv2\ShoppingAppv2\ShoppingAppv2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.41

@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  Practical3.cpp
+u:\programming c++\practical3\practical3\practical3.cpp(54): warning C4715: 'isPrime': not all control paths return a value
+  Practical3.vcxproj -> U:\Programming C++\Practical3\Debug\Practical3.exe
+  Practical3.vcxproj -> U:\Programming C++\Practical3\Debug\Practical3.pdb (Partial PDB)

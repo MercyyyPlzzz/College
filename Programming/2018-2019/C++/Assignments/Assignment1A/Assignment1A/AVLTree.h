@@ -9,7 +9,6 @@ struct TreeNode
 	TreeNode<T> *left;
 	TreeNode<T> *right;
 	BalFactor bf;
-	string key;
 };
 
 template <class T>
@@ -26,7 +25,6 @@ public:
 	int NumberOfNodes();				
 	void RetrieveItem(T& item, bool& found);  
 	void InsertItem(T item);
-	void DeleteItem(T item);
 	void PrintTree(ofstream& outfile);
 	void Display();
 	void HasA(string Surname, vector<T>& list);
@@ -37,80 +35,184 @@ public:
 	void RotateRight(TreeNode<T>* & tree);
 	void RightBalance(TreeNode<T> *& tree, bool& taller);
 	void LeftBalance(TreeNode<T> *& tree, bool &taller);
-	void DelRightBalance(TreeNode<T>*& tree, bool& shorter);
-	void DelLeftBalance(TreeNode<T>*& tree, bool& shorter);
+	void DeleteItem(T item);
+	void DeleteNode(TreeNode <T> * & tree, bool & shorter);
+	void GetPredecessor(TreeNode<T> * tree, T & data);
+	void DelRightBalance(TreeNode<T> *& tree, bool & shorter);
+	void DelLeftBalance(TreeNode<T> *& tree, bool & shorter);
+
 private:
 	TreeNode<T>* root;
 	void PrintInOrderPrivate(TreeNode<T> *tree);
 	int CountNodes(TreeNode<T>* tree);
 	void Retrieve(TreeNode<T>* tree, T& item, bool& found);
 	void Insert(TreeNode<T>*& tree, T item, bool& taller);
-	void Delete(TreeNode<T>*& tree, T item,bool& shorter);
-	void DeleteNode(TreeNode<T>*& tree,bool& shorter);
-	void GetPredecessor(TreeNode<T>* tree, T& data);
 	void Print(TreeNode<T>* tree, ofstream& outfile);
 	void Destroy(TreeNode<T>* tree);
 	void Search(TreeNode<T>* tree, vector<T>& list, string substr);
 	void Show(TreeNode<T>* tree);
+	void Delete(TreeNode<T>*& tree, T item, bool & shorter);
 };
 
+
 template <class T>
-void TreeType<T>::DelLeftBalance(TreeNode<T>*& tree, bool& shorter)
+void TreeType<T> ::Delete(TreeNode<T>*& tree, T item, bool & shorter)
 {
-	TreeNode<T>* ls = tree->left;
-	TreeNode<T>* rs;
-	switch (ls->bf)
+	if (tree != NULL)
 	{
-	case LH:tree->bf = ls->bf = EH;
-		RotateRight(tree);
-		shorter = true;
-		break;
-	case EH:tree->bf = LH;
-		ls->bf = RH;
-		RotateRight(tree);
-		shorter = false;
-		break;
-	case RH:rs = ls->right;
-		switch (rs->bf)
+		if (item < tree->info)
 		{
-		case LH:tree->bf = RH;
-			ls->bf = EH;
-			break;
-		case EH:tree->bf = ls->bf = EH;
-			break;
-		case RH:tree->bf = EH;
-			ls->bf = LH;
-			break;
+			Delete(tree->left, item, shorter);
+			// Look in left subtree.
+			if (shorter)
+				switch (tree->bf)
+				{
+				case LH: tree->bf = EH; break;
+				case EH: tree->bf = RH; shorter = false;
+					break;
+				case RH: DelRightBalance(tree, shorter);
+				} // END SWITCH	
 		}
-		rs->bf = EH;
-		RotateLeft(tree->left);
-		RotateRight(tree);
-		shorter = true;
+		else if (item > tree->info)
+		{
+			Delete(tree->right, item, shorter);
+			// Look in right subtree.
+			if (shorter)
+				switch (tree->bf)
+				{
+				case LH: DelLeftBalance(tree, shorter);
+				break;				case EH: tree->bf = LH; shorter = false; 							break;
+				case RH: tree->bf = EH; break;
+				} // END SWITCH
+		}
+		else
+			DeleteNode(tree, shorter);
+		// Node found; call DeleteNode.
+	} // END if (tree != NULL)
+	else
+	{
+		cout << "\nNOTE: " << item
+			<< " not in the tree so cannot be deleted.";
 	}
 }
 
 template <class T>
-void TreeType<T>::DelRightBalance(TreeNode<T> *& tree, bool &shorter)
+void TreeType<T> ::DeleteItem(T item)
+// Calls recursive function Delete to delete item from tree.
 {
-	TreeNode<T>* rs = tree->right;
-	TreeNode<T>* ls;
+	bool shorter;
+	Delete(root, item, shorter);
+}
+
+template<class T>
+void TreeType<T>::DeleteNode(TreeNode<T>*& tree, bool & shorter)
+{
+	T data;	TreeNode <T> * tempPtr;
+	tempPtr = tree;
+	if (tree->left == NULL)
+	{
+		tree = tree->right;
+		delete tempPtr;
+		shorter = true;
+	}
+	else if (tree->right == NULL)
+	{
+		tree = tree->left;
+		delete tempPtr;
+		shorter = true;
+	}
+	else
+	{
+		GetPredecessor(tree, data);
+		tree->info = data;
+		Delete(tree->left, data, shorter);
+		// Delete the predecessor node
+		if (shorter)
+			switch (tree->bf)
+			{
+			case LH: tree->bf = EH; break;
+			case EH: tree->bf = RH; shorter = false;
+				break;
+			case RH: DelRightBalance(tree, shorter);
+			}
+	}
+
+}
+
+template<class T>
+void TreeType<T>::GetPredecessor(TreeNode<T>* tree, T & data)
+{
+	tree = tree->left;
+	while (tree->right != NULL)
+		tree = tree->right;
+	data = tree->info;
+}
+
+template<class T>
+void TreeType<T>::DelRightBalance(TreeNode<T>*& tree, bool & shorter)
+{
+	TreeNode<T> * rs = tree->right;
+	TreeNode<T> * ls;
 	switch (rs->bf)
 	{
-	case RH:tree->bf = rs->bf = EH; RotateLeft(tree); shorter = true; break;
-	case EH:tree->bf = RH; rs->bf = LH; RotateLeft(tree); shorter = false; break;
-	case LH:ls = rs->left;
+	case RH:	tree->bf = rs->bf = EH;
+		RotateLeft(tree);
+		shorter = true; break;
+	case EH:	tree->bf = RH;
+		rs->bf = LH;
+		RotateLeft(tree);
+		shorter = false; break;
+	case LH:	ls = rs->left;
 		switch (ls->bf)
 		{
-		case RH:tree->bf = LH; rs->bf = EH; break;
-		case EH:tree->bf = rs->bf = EH; break;
-		case LH:tree->bf = EH; rs->bf = RH; break;
-		}
+		case RH:	tree->bf = LH;
+			rs->bf = EH; break;
+		case EH:	tree->bf = rs->bf = EH;
+			break;
+		case LH:	tree->bf = EH;
+			rs->bf = RH; break;
+		} // END SWITCH
+
 		ls->bf = EH;
 		RotateRight(tree->right);
 		RotateLeft(tree);
 		shorter = true;
 	}
+
 }
+
+template<class T>
+void TreeType<T>::DelLeftBalance(TreeNode<T>*& tree, bool & shorter)
+{
+	TreeNode<T> * ls = tree->left;
+	TreeNode<T> * rs;
+	switch (ls->bf)
+	{
+	case LH:	tree->bf = ls->bf = EH;
+		RotateRight(tree);
+		shorter = true; break;
+	case EH:	tree->bf = LH;
+		ls->bf = RH;
+		RotateRight(tree);
+		shorter = false; break;
+	case RH:	rs = ls->right;
+		switch (rs->bf)
+		{
+		case LH:	tree->bf = RH;
+			ls->bf = EH; break;
+		case EH:	tree->bf = ls->bf = EH;
+			break;
+		case RH:	tree->bf = EH;
+			ls->bf = LH; break;
+		} // END SWITCH
+		rs->bf = EH;
+		RotateLeft(tree->left);
+		RotateRight(tree);
+		shorter = true;
+	}
+
+}
+
 
 template <class T>
 void TreeType<T>::Search(TreeNode<T>* tree, vector<T>& list, string subs)
@@ -426,102 +528,6 @@ void TreeType<T>::Print(TreeNode<T>* tree, ofstream& outfile)
 		Print(tree->right, outfile);
 	}
 
-}
-
-template <class T>
-void TreeType<T>::Delete(TreeNode<T>* &tree, T item,bool &shorter)
-{
-	if (tree != NULL)
-	{
-		if (item < tree->info)
-		{
-			Delete(tree->left, item, shorter);
-			//Look in left subtree;
-			if (shorter)
-			{
-				switch (tree->bf)
-				{
-				case LH:tree->bf = EH; break;
-				case EH:tree->bf = RH; shorter = false; break;
-				case RH:DelRightBalance(tree, shorter);
-				}
-			}
-			else if (item > tree->info)
-			{
-				Delete(tree->right, item, shorter);
-				//Look in right subtree;
-				if (shorter)
-				{
-					switch (tree->bf)
-					{
-					case LH:DelLeftBalance(tree, shorter); break;
-					case EH:tree->bf = LH; shorter = false; break;
-					case RH:tree->bf = EH; break;
-					}
-				}
-			}
-			else
-			{
-				DeleteNode(tree, shorter);
-				//Node Found, Call DeleteNode
-			}
-		}
-		else
-		{
-			cout << "\nNOTE : " << item << " not in the tree,so it cannot be deleted";
-		}
-	}
-}
-template <class T>
-void TreeType<T>::DeleteNode(TreeNode<T>* &tree,bool &shorter)
-{
-	T data;
-	TreeNode<T>* tempPtr;
-	tempPtr = tree;
-	if (tree->left == NULL)
-	{
-		tree = tree->right;
-		delete tempPtr;
-		shorter = true;
-	}
-	else if (tree->right == NULL)
-	{
-		tree = tree->left;
-		delete tempPtr;
-		shorter = true;
-	}
-	else
-	{
-		GetPredecessor(tree, data);
-		tree->info = data;
-		Delete(tree->left, data, shorter);
-		//Delete Predeccessor Node
-		if (shorter)
-		{
-			switch (tree->bf)
-			{
-			case LH:tree->bf = EH; break;
-			case EH:tree->bf = RH; shorter = false; break;
-			case RH:DelRightBalance(tree, shorter);
-			}
-		}
-	}
-}
-template <class T>
-void TreeType<T>::DeleteItem(T item)
-{
-	bool shorter;
-	Delete(root, item,shorter);
-}
-template <class T>
-void TreeType<T>::GetPredecessor(TreeNode<T>* tree, T &data)
-{
-	tree = tree->left;
-	while (tree->right != NULL)
-	{
-		tree = tree->right;
-	}
-	data = tree->info;
 }
 
 template <class T>

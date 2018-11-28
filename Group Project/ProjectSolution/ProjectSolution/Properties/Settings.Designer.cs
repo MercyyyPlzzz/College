@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AbbeyMotors.Properties
+namespace ProjectSolution.Properties
 {
 
 

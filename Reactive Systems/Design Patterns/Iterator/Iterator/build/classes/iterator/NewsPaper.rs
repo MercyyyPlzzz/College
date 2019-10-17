@@ -1,0 +1,1 @@
+com.lit.reactivesystems.objectorienteddesignpatterns.iterator.NewsPaper
